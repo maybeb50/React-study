@@ -59,20 +59,20 @@ function App() {
 
   const onRemove = (id) => {
     setUsers(
-      users.filter( user => user.id !== id) 
-    );
-    /* 선택한 id 값이 아닌 id 원소들을 filter 해서 배열로 추출 */
-  }
-
-  const onToggle = (id) => {
-    console.log(id);
-    setUsers(
-      users.map(
-        user => user.id === id 
-          ? {...user, active: !user.active} : user
+      users.filter(
+        user => user.id !== id    // 조건에 만족하는 경우에는 새로운 배열에 넣는다. (true인 것만)
       )
     );
   };
+
+  const onToggle = (id) => {
+    setUsers(
+      users.map(
+        user => user.id === id 
+        ? {...user, active: !user.active} : user
+      )
+    )
+  }
 
   return (
     <>
