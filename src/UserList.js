@@ -11,14 +11,14 @@ function User({ user, onRemove, onToggle }) {
     // 가상 돔에 렌더링 된다고해서 느려진다고는 하지 않지만, 내용이 많으면 느려질 수도 있음. 
     // 가상 돔에서도 리소스를 아껴야 할떄  => 컴포넌트 리렌더링 성능 최적화 라고 한다.
       
-    useEffect(() => {
-        console.log('user 값이 설정됨');
-        console.log(user);  // 컴포넌트가 처음 호출 할 때와 값이 바뀔 될 때마다 호출 된다. 
-        return() => {
-            console.log('user 값이 바뀌기 전');
-            console.log(user);
-        }
-    }, [user]); 
+    // useEffect(() => {
+    //     console.log('user 값이 설정됨');
+    //     console.log(user);  // 컴포넌트가 처음 호출 할 때와 값이 바뀔 될 때마다 호출 된다. 
+    //     return() => {
+    //         console.log('user 값이 바뀌기 전');
+    //         console.log(user);
+    //     }
+    // }, [user]); 
 
     return(
         <div>
